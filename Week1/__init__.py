@@ -20,7 +20,7 @@ def test2():
 
 
 def check_output(output, correct):
-    if output == correct:
+    if output.splitlines() == correct.splitlines():
         return
 
     output = [line for line in output.splitlines() if line != ""]
@@ -29,7 +29,7 @@ def check_output(output, correct):
     help = None
     if len(output) == len(correct):
         if all(ol.rstrip() == cl for ol, cl in zip(output, correct)):
-            help = "did you add too much trailing whitespace to the end of your pyramid?"
+            help = output.splitlines()
         elif all(ol[1:] == cl for ol, cl in zip(output, correct)):
             help = "are you printing an additional character at the beginning of each line?"
 
