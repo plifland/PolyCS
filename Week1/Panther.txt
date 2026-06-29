@@ -1,4 +1,2 @@
-What is your name?
-Panther
 Hello Panther, it's nice to meet you!
 Did you know your name is 7 characters long?
