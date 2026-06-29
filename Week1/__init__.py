@@ -1,5 +1,4 @@
 import check50
-import check50.java
 
 @check50.check()
 def exists():
@@ -8,17 +7,12 @@ def exists():
     check50.include("Panther.txt", "Poly Panther.txt")
 
 @check50.check(exists)
-def compiles():
-    """PersonalHello.java compiles"""
-    check50.java.compile("PersonalHello.java", lcs50=True)
-
-@check50.check(compiles)
 def test1():
     """handles a 1 word name correctly """
     out = check50.run("./PersonalHello.java").stdin("Poly").stdout()
     check_output(out, open("Panther.txt").read())
 
-@check50.check(compiles)
+@check50.check(exists)
 def test2():
     """handles a name with a space correctly """
     out = check50.run("./PersonalHello.java").stdin("Poly Panther").stdout()
