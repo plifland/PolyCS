@@ -9,7 +9,7 @@ def exists():
 @check50.check(exists)
 def test1():
     """handles a 1 word name correctly """
-    out = check50.run("java ./PersonalHello.java").stdin("Poly").stdout()
+    out = check50.run("java ./PersonalHello.java").stdin("P").stdout()
     check_output(out, open("Panther.txt").read())
 
 @check50.check(exists)
