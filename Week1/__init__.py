@@ -1,5 +1,4 @@
 import check50
-import check50.c
 
 @check50.check()
 def exists():
@@ -10,7 +9,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """PersonalHello.java compiles"""
-    check50.c.compile("PersonalHello.java", lcs50=True)
+    check50.compile("PersonalHello.java", lcs50=True)
 
 @check50.check(compiles)
 def test1():
