@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def testzero():
     """input of 0 yields output of Fahrenheit temperature: 32.0"""
-    check50.run("python3 indoor.py").stdin("0", prompt=False).stdout("Fahrenheit temperature: 32.0").exit()
+    check50.run("python3 temperature_converter.py").stdin("0", prompt=False).stdout("Fahrenheit temperature: 32.0").exit()
 
 @check50.check(exists)
 def testfortytwo():
