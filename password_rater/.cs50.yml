@@ -1,0 +1,7 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require password_rater.py
+
+check50:
+  files: *submit50_files
