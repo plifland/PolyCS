@@ -2,7 +2,7 @@ submit50:
   files: &submit50_files
     - !exclude "*"
     - !require temperature_converter.py
-  style: false
+  style: true
 
 check50:
   files: *submit50_files
