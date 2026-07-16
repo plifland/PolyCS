@@ -22,23 +22,23 @@ def test_turn3_win():
 
 @check50.check(exists)
 def test_too_low():
-    """Guessing too low on the first guesss says 'Too low'"""
-    check50.run("python3 seven_guesser.py").stdin("3", prompt=True).stdout(".*[Tt]oo low.*", regex=True).stdin("7", prompt=True).exit()
+    """Guessing too low on the first guess says 'Too low'"""
+    check50.run("python3 seven_guesser.py").stdin("3", prompt=True).stdout(".*[Tt]oo low.*", regex=True).kill()
 
 @check50.check(exists)
 def test_too_high():
-    """Guessing too high on the first guesss says 'Too high'"""
-    check50.run("python3 seven_guesser.py").stdin("8", prompt=True).stdout(".*[Tt]oo high.*", regex=True).stdin("7", prompt=True).exit()
+    """Guessing too high on the first guess says 'Too high'"""
+    check50.run("python3 seven_guesser.py").stdin("8", prompt=True).stdout(".*[Tt]oo high.*", regex=True).kill()
 
 @check50.check(exists)
 def test_too_low2():
-    """Guessing too low on the second guesss says 'Too low'"""
-    check50.run("python3 seven_guesser.py").stdin("8", prompt=True).stdin("3", prompt=True).stdout(".*[Tt]oo low.*", regex=True).stdin("7", prompt=True).exit()
+    """Guessing too low on the second guess says 'Too low'"""
+    check50.run("python3 seven_guesser.py").stdin("8", prompt=True).stdin("3", prompt=True).stdout(".*[Tt]oo low.*", regex=True).kill()
 
 @check50.check(exists)
 def test_too_high2():
-    """Guessing too high on the second guesss says 'Too high'"""
-    check50.run("python3 seven_guesser.py").stdin("3", prompt=True).stdin("8", prompt=True).stdout(".*[Tt]oo high.*", regex=True).stdin("7", prompt=True).exit()
+    """Guessing too high on the second guess says 'Too high'"""
+    check50.run("python3 seven_guesser.py").stdin("3", prompt=True).stdin("8", prompt=True).stdout(".*[Tt]oo high.*", regex=True).kill()
 
 @check50.check(exists)
 def test_lose():
