@@ -5,7 +5,7 @@ def exists():
     """number_guesser.py exists"""
     check50.exists("number_guesser.py")
 
-  @check50.check(exists)
+@check50.check(exists)
 def test_too_low():
     """Guessing too low on the first guess says 'Too low'"""
     check50.run("python3 number_guesser.py").stdin("0", prompt=True).stdout(".*[Tt]oo low.*", regex=True).kill()
