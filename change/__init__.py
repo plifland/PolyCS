@@ -8,35 +8,35 @@ def exists():
 
 @check50.check(exists)
 def test041():
-    """input of 0.41 yields output of 4"""
-    check50.run("python3 change.py").stdin("0.41").stdout(coins(4), "4\n").exit()
+    """input of 41 yields output of 4"""
+    check50.run("python3 change.py").stdin("41").stdout(coins(4), "4\n").exit()
 
 @check50.check(exists)
 def test001():
-    """input of 0.01 yields output of 1"""
-    check50.run("python3 change.py").stdin("0.01").stdout(coins(1), "1\n").exit()
+    """input of 1 yields output of 1"""
+    check50.run("python3 change.py").stdin("1").stdout(coins(1), "1\n").exit()
 
 @check50.check(exists)
 def test015():
-    """input of 0.15 yields output of 2"""
-    check50.run("python3 change.py").stdin("0.15").stdout(coins(2), "2\n").exit()
+    """input of 15 yields output of 2"""
+    check50.run("python3 change.py").stdin("15").stdout(coins(2), "2\n").exit()
 
 @check50.check(exists)
 def test160():
-    """input of 1.6 yields output of 7"""
-    check50.run("python3 change.py").stdin("1.6").stdout(coins(7), "7\n").exit()
+    """input of 160 yields output of 7"""
+    check50.run("python3 change.py").stdin("160").stdout(coins(7), "7\n").exit()
 
 @check50.check(exists)
 def test230():
-    """input of 23 yields output of 92"""
-    check50.run("python3 change.py").stdin("23").stdout(coins(92), "92\n").exit()
+    """input of 2300 yields output of 92"""
+    check50.run("python3 change.py").stdin("2300").stdout(coins(92), "92\n").exit()
 
 @check50.check(exists)
 def test420():
-    """input of 4.2 yields output of 18"""
+    """input of 420 yields output of 18"""
     from re import search
     expected = "18\n"
-    actual = check50.run("python3 change.py").stdin("4.2").stdout()
+    actual = check50.run("python3 change.py").stdin("420").stdout()
     if not search(coins(18), actual):
         help = None
         if search(coins(22), actual):
