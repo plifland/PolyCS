@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require hello_world.py
+    - !require boulder_library.py
   style: false
 
 check50:

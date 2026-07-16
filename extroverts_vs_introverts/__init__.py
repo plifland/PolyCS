@@ -24,4 +24,3 @@ def test500():
 def test0():
     """Serves a cat food ad for someone with 0 friends"""
     check50.run("python3 extroverts_vs_introverts.py").stdin("0", prompt=True).stdout("Cat food ad:.+", regex=True).exit()
-
