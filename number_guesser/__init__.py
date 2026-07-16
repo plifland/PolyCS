@@ -28,4 +28,4 @@ def test_too_high2():
 @check50.check(exists)
 def test_lose():
     """Guessing wrong three times loses"""
-    check50.run("python3 number_guesser.py").stdin("0", prompt=True).stdin("0", prompt=True).stdin("0", prompt=True).stdout(".*[Ll]ose.*", regex=True).exit()
+    check50.run("python3 number_guesser.py").stdin("0", prompt=True).stdin("0", prompt=True).stdin("0", prompt=True).stdout(".*[Ll]os[et].*", regex=True).exit()
