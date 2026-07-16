@@ -8,9 +8,9 @@ def exists():
 @check50.check(exists)
 def testalice():
     """input of Alice yields output of Hello, Alice!"""
-    check50.run("python3 personalized_hello.py").stdin("Alice", prompt=False).stdout("Hello, Alice!").exit()
+    check50.run("python3 personalized_hello.py").stdin("Alice", prompt=True).stdout("Hello, Alice!").exit()
 
 @check50.check(exists)
 def testbob():
     """input of Bob yields output of Hello, Bob!"""
-    check50.run("python3 personalized_hello.py").stdin("Bob", prompt=False).stdout("Hello, Bob!").exit()
+    check50.run("python3 personalized_hello.py").stdin("Bob", prompt=True).stdout("Hello, Bob!").exit()

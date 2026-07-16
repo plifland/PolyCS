@@ -1,8 +1,8 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require hello_world.py
-  style: false
+    - !require extroverts_vs_introverts.py
+  style: true
 
 check50:
   files: *submit50_files
