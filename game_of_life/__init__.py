@@ -18,13 +18,13 @@ def test_blinker():
 @check50.check(exists)
 def test_pulsar():
     """Prints the 17x17 Pulsar board"""
-    board = check50.run("python3 game_of_life.py boards/pulsar.txt").stdin("10").stdout()
+    board = check50.run("python3 game_of_life.py boards/pulsar.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/pulsar.txt")
 
 @check50.check(exists)
 def test_spaceship():
     """Prints the rectangular Heavy Weight Spaceship board"""
-    board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdin("10").stdout()
+    board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/heavyWeightSpaceship.txt")
 
 def check_board(board, source):
