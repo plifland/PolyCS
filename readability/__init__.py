@@ -1,4 +1,5 @@
 import check50
+from re import match
 
 @check50.check()
 def exists():
@@ -11,9 +12,9 @@ def multiple_sentences():
     check50.include("texts")
     check50.run("python3 readability.py texts/rowling_excerpt.txt").stdout("Grade\D+5", "Grade 5\n").exit(0)
 
-@check50.check(exists)
+@check50.check(exists, max_log_lines=100)
 def multiple_lines():
-    """handles mulitple lines of input"""
+    """handles multiple lines of input"""
     check50.include("texts")
     check50.run("python3 readability.py texts/textbook_excerpt.txt").stdout("Grade\D+11", "Grade 11\n").exit(0)
 
@@ -27,9 +28,12 @@ def long_text():
 def short_gutenberg_text():
     """handles a short text from Gutenberg by avoiding reading under *** END"""
     check50.include("texts")
-    output = check50.run("python3 readability.py texts/potter.txt").stdout("Grade\D+7", "Grade 7\n")
+    output = check50.run("python3 readability.py texts/potter.txt").stdout()
+    expected = "Grade 7\n"
     help = None
     if output == "Grade 11":
-      help = "make sure you don't read the long license at the bottom of potter.txt!\nIt's a much higher reading level than the text itself!"
-      raise check50.Mismatch("Grade 7\n", output, help=help)
+        help = "make sure you don't read the long license at the bottom of potter.txt!\nIt's a much higher reading level than the text itself!"
+        raise check50.Mismatch(expected, output, help=help)
 
+    if not match(expected, output):
+      raise check50.Mismatch(expected, output, help=help)
