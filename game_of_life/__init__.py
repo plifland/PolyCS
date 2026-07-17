@@ -11,19 +11,19 @@ def exists():
 
 @check50.check(exists)
 def test_blinker():
-    """Prints the tiny 3x3 Blinker board"""
+    """Runs a blinker 10 generations"""
     board = check50.run("python3 game_of_life.py boards/blinker.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/blinker.txt")
 
 @check50.check(exists)
 def test_pulsar():
-    """Prints the 17x17 Pulsar board"""
+    """Runs a pulsar 12 generations"""
     board = check50.run("python3 game_of_life.py boards/pulsar.txt").stdin("12").stdout(timeout=20)
     check_board(board, "boards/pulsar.txt")
 
 @check50.check(exists)
 def test_spaceship():
-    """Prints the rectangular Heavy Weight Spaceship board"""
+    """Runs a heavy weight spaceship 10 generations"""
     board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/heavyWeightSpaceship_after10.txt")
 
@@ -39,7 +39,7 @@ def check_board(board, source):
     board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
     expected = open(source, encoding="utf-8-sig").read()
-    help = board
+    help = "\n\tIf you changed the looks of your board dramatically, it might not match and that's ok!\n\nHere is your board:\n" + board + "\n\nAnd here is the solution:\n" + expected
     if not match(expected, board):
         if len(expected) == len(board) - 1:
           help = "\n\tWatch out - the text file has a strange whitespace character that you are turning into a cell!\n\tMake sure you encode only 0s and 1s\n"
