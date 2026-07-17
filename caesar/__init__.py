@@ -41,6 +41,6 @@ def handles_empty_key():
     check50.run("python3 caesar.py").stdin("this key is empty").stdin("").reject()
 
 @check50.check(exists)
-def handles_empty_key():
-    """handles empty key"""
+def handles_nonnumeric_key():
+    """handles non-numeric key"""
     check50.run("python3 caesar.py").stdin("this key is bad").stdin("bad to the bone").reject()
