@@ -36,4 +36,4 @@ def short_gutenberg_text():
         raise check50.Mismatch(expected, output, help=help)
 
     if not match(expected, output):
-      raise check50.Mismatch(expected, output, help=help)
+        raise check50.Mismatch(expected, output, help=help)
