@@ -11,19 +11,19 @@ def exists():
 
 @check50.check(exists)
 def test_blinker():
-    """Prints the tiny 3x3 blinker.txt board"""
+    """Prints the tiny 3x3 Blinker board"""
     board = check50.run("python3 automata_board.py boards/blinker.txt").stdout()
     check_board(board, "boards/blinker.txt")
 
 @check50.check(exists)
 def test_pulsar():
-    """Prints the 17x17 pulsar.txt board"""
+    """Prints the 17x17 Pulsar board"""
     board = check50.run("python3 automata_board.py boards/pulsar.txt").stdout()
     check_board(board, "boards/pulsar.txt")
 
 @check50.check(exists)
 def test_spaceship():
-    """Prints the rectangular heavyWeightSpaceship.txt board"""
+    """Prints the rectangular Heavy Weight Spaceship board"""
     board = check50.run("python3 automata_board.py boards/heavyWeightSpaceship.txt").stdout()
     check_board(board, "boards/heavyWeightSpaceship.txt")
 
