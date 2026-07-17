@@ -1,9 +1,9 @@
-1. Programming as a way of thinking
-The first goal of this book is to teach you how to program in Python. But learning to program means learning a new way to think, so the second goal of this book is to help you think like a computer scientist. This way of thinking combines some of the best features of mathematics, engineering, and natural science. Like mathematicians, computer scientists use formal languages to denote ideas – specifically computations. Like engineers, they design things, assembling components into systems and evaluating trade-offs among alternatives. Like scientists, they observe the behavior of complex systems, form hypotheses, and test predictions.
+ï»¿1. Programming as a way of thinking
+The first goal of this book is to teach you how to program in Python. But learning to program means learning a new way to think, so the second goal of this book is to help you think like a computer scientist. This way of thinking combines some of the best features of mathematics, engineering, and natural science. Like mathematicians, computer scientists use formal languages to denote ideas â€“ specifically computations. Like engineers, they design things, assembling components into systems and evaluating trade-offs among alternatives. Like scientists, they observe the behavior of complex systems, form hypotheses, and test predictions.
 
 We will start with the most basic elements of programming and work our way up. In this chapter, we'll see how Python represents numbers, letters, and words. And you'll learn to perform arithmetic operations.
 
-You will also start to learn the vocabulary of programming, including terms like operator, expression, value, and type. This vocabulary is important – you will need it to understand the rest of the book, to communicate with other programmers, and to use and understand virtual assistants.
+You will also start to learn the vocabulary of programming, including terms like operator, expression, value, and type. This vocabulary is important â€“ you will need it to understand the rest of the book, to communicate with other programmers, and to use and understand virtual assistants.
 
 1.6. Formal and natural languages
 Natural languages are the languages people speak, like English, Spanish, and French. They were not designed by people; they evolved naturally.
@@ -40,9 +40,9 @@ Running: Experiment by making changes and running different versions. Often if y
 
 Ruminating: Take some time to think! What kind of error is it: syntax, runtime, or semantic? What information can you get from the error messages, or from the output of the program? What kind of error could cause the problem you're seeing? What did you change last, before the problem appeared?
 
-Rubberducking: If you explain the problem to someone else, you sometimes find the answer before you finish asking the question. Often you don't need the other person; you could just talk to a rubber duck. And that's the origin of the well-known strategy called rubber duck debugging. I am not making this up – see https://en.wikipedia.org/wiki/Rubber_duck_debugging.
+Rubberducking: If you explain the problem to someone else, you sometimes find the answer before you finish asking the question. Often you don't need the other person; you could just talk to a rubber duck. And that's the origin of the well-known strategy called rubber duck debugging. I am not making this up â€“ see https://en.wikipedia.org/wiki/Rubber_duck_debugging.
 
-Retreating: At some point, the best thing to do is back up – undoing recent changes – until you get to a program that works. Then you can start rebuilding.
+Retreating: At some point, the best thing to do is back up â€“ undoing recent changes â€“ until you get to a program that works. Then you can start rebuilding.
 
 Resting: If you give your brain a break, sometime it will find the problem for you.
 
