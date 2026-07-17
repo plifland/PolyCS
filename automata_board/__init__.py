@@ -21,6 +21,12 @@ def test_pulsar():
     board = check50.run("python3 automata_board.py boards/pulsar.txt").stdout()
     check_board(board, "boards/pulsar.txt")
 
+@check50.check(exists)
+def test_spaceship():
+    """Prints the rectangular heavyWeightSpaceship.txt board"""
+    board = check50.run("python3 automata_board.py boards/heavyWeightSpaceship.txt").stdout()
+    check_board(board, "boards/heavyWeightSpaceship.txt")
+
 def check_board(board, source):
     # Get the two characters likely used to draw
     char_cnts = Counter(board.replace("\n", ""))
