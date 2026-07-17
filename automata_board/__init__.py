@@ -16,6 +16,7 @@ def test_blinker():
     check_board(board, "boards/blinker.txt")
 
 def check_board(board, source):
+    help = board
     # Get the two characters likely used to draw
     char_cnts = Counter(board)
 
@@ -25,6 +26,5 @@ def check_board(board, source):
 
     expected = open(source, encoding="utf-8-sig").read()
 
-    help = str(char_cnts)
     if not match(expected, board):
         raise check50.Mismatch(expected, board, help=help)
