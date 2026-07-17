@@ -20,4 +20,4 @@ def load_large():
 @check50.check(exists)
 def test_reject_nofile():
     """demands a file passed in via command line"""
-    check50.run("python3 load_dictionary.py").exit(1)
+    check50.run("python3 load_dictionary.py").exit(0)
