@@ -22,15 +22,14 @@ def test_pulsar():
     check_board(board, "boards/pulsar.txt")
 
 def check_board(board, source):
-    help = board
     # Get the two characters likely used to draw
-    char_cnts = Counter(board)
+    char_cnts = Counter(board.replace("\n", ""))
 
     # Replace the user characters with 0,1 like the source file
     board = board.replace(char_cnts.most_common(2)[0][0], "0")
     board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
     expected = open(source, encoding="utf-8-sig").read()
-
+    help = "If you changed the looks of your board dramatically, it might not match and that's ok!"
     if not match(expected, board):
         raise check50.Mismatch(expected, board, help=help)
