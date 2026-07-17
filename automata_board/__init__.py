@@ -25,6 +25,6 @@ def check_board(board, source):
 
     expected = open(source, encoding="utf-8-sig").read()
 
-    help = ""
+    help = str(char_cnts)
     if not match(expected, board):
         raise check50.Mismatch(expected, board, help=help)
