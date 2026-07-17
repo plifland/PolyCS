@@ -32,7 +32,7 @@ def short_gutenberg_text():
     expected = "Grade 7\n"
     help = None
     if output == "Grade 11\n":
-        help = "make sure you don't read the long license at the bottom of potter.txt\n\tIt's a much higher reading level than the text itself!"
+        help = "\n\tMake sure you don't read the long license at the bottom of potter.txt\n\tIt's a much higher reading level than the text itself!"
         raise check50.Mismatch(expected, output, help=help)
 
     if not match(expected, output):
