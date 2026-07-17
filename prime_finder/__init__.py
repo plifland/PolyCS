@@ -8,17 +8,17 @@ def exists():
 @check50.check(exists)
 def test1():
     """2 is prime"""
-    check50.run("python3 prime_finder.py").stdin("2").stdout("[2]\n").exit()
+    check50.run("python3 prime_finder.py").stdin("2").stdout("[2]").exit()
 
 @check50.check(exists)
 def test2():
     """4 has two smaller primes"""
-    check50.run("python3 prime_finder.py").stdin("4").stdout("[2, 3]\n").exit()
+    check50.run("python3 prime_finder.py").stdin("4").stdout("[2, 3]").exit()
 
 @check50.check(exists)
 def test3():
     """13 has 6 smaller primes, including itself"""
-    check50.run("python3 prime_finder.py").stdin("13").stdout("[2, 3, 5, 7, 11, 13]\n").exit()
+    check50.run("python3 prime_finder.py").stdin("13").stdout("[2, 3, 5, 7, 11, 13]").exit()
 
 @check50.check(exists)
 def test_reject_negative():
