@@ -15,6 +15,12 @@ def test_blinker():
     board = check50.run("python3 automata_board.py boards/blinker.txt").stdout()
     check_board(board, "boards/blinker.txt")
 
+@check50.check(exists)
+def test_pulsar():
+    """Prints the 17x17 pulsar.txt board"""
+    board = check50.run("python3 automata_board.py boards/pulsar.txt").stdout()
+    check_board(board, "boards/pulsar.txt")
+
 def check_board(board, source):
     help = board
     # Get the two characters likely used to draw
