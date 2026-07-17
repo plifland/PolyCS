@@ -36,6 +36,8 @@ def check_board(board, source):
     board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
     expected = open(source, encoding="utf-8-sig").read()
-    help = "If you changed the looks of your board dramatically, it might not match and that's ok!"
+    help = "\n\tIf you changed the looks of your board dramatically, it might not match and that's ok!"
     if not match(expected, board):
+        if len(expected) == len(board) - 1:
+          help = "\n\tWatch out - the text file has a strange whitespace character that you are turning into a cell!\n\tMake sure you encode only 0s and 1s"
         raise check50.Mismatch(expected, board, help=help)
