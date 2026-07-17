@@ -28,6 +28,9 @@ def test_spaceship():
     check_board(board, "boards/heavyWeightSpaceship.txt")
 
 def check_board(board, source):
+    # Get only the final drawn board
+    board = board.split("\x1b[H\x1b[2J")[-1]
+
     # Get the two characters likely used to draw
     char_cnts = Counter(board.replace("\n", ""))
 
@@ -36,7 +39,7 @@ def check_board(board, source):
     board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
     expected = open(source, encoding="utf-8-sig").read()
-    help = "\n\tIf you changed the looks of your board dramatically, it might not match and that's ok!"
+    help = board
     if not match(expected, board):
         if len(expected) == len(board) - 1:
           help = "\n\tWatch out - the text file has a strange whitespace character that you are turning into a cell!\n\tMake sure you encode only 0s and 1s\n"
