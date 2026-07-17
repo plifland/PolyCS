@@ -27,6 +27,11 @@ def test_spaceship():
     board = check50.run("python3 automata_board.py boards/heavyWeightSpaceship.txt").stdout()
     check_board(board, "boards/heavyWeightSpaceship.txt")
 
+@check50.check(exists)
+def test_reject_nofile():
+    """demands a file passed in"""
+    check50.run("python3 automata_board.py").exit()
+
 def check_board(board, source):
     # Get the two characters likely used to draw
     char_cnts = Counter(board.replace("\n", ""))

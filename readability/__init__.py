@@ -25,6 +25,11 @@ def long_text():
     check50.run("python3 readability.py texts/carroll.txt").stdout("Grade\D+7", "Grade 7\n").exit(0)
 
 @check50.check(exists)
+def test_reject_nofile():
+    """demands a file passed in"""
+    check50.run("python3 readability.py").exit()
+
+@check50.check(exists)
 def short_gutenberg_text():
     """handles a short text from Gutenberg by avoiding reading under *** END"""
     check50.include("texts")
