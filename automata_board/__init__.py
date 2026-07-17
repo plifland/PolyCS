@@ -27,4 +27,4 @@ def check_board(board, source):
 
     help = ""
     if not match(expected, board):
-      raise check50.Mismatch(expected, board, help=help)
+        raise check50.Mismatch(expected, board, help=help)
