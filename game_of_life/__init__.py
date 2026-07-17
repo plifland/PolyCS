@@ -27,6 +27,26 @@ def test_spaceship():
     board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/heavyWeightSpaceship_after10.txt")
 
+@check50.check(exists)
+def test_reject_nofile():
+    """demands a file passed in"""
+    check50.run("python3 game_of_life.py").reject()
+
+@check50.check(exists)
+def test_reject_negative():
+    """rejects a negative generation count like -1"""
+    check50.run("python3 game_of_life.py boards/blinker.txt").stdin("-1").reject()
+
+@check50.check(exists)
+def test_reject_foo():
+    """rejects a non-numeric generation count of "foo" """
+    check50.run("python3 game_of_life.py boards/blinker.txt").stdin("foo").reject()
+
+@check50.check(exists)
+def test_reject_empty():
+    """rejects an empty generation count of "" """
+    check50.run("python3 game_of_life.py boards/blinker.txt").stdin("").reject()
+
 def check_board(board, source):
     # Get only the final drawn board
     board = board.split("\x1b[H\x1b[2J")[-1]

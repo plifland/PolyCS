@@ -47,5 +47,5 @@ def test_reject_foo():
 
 @check50.check(exists)
 def test_reject_empty():
-    """rejects a non-numeric input of "" """
+    """rejects an empty input of "" """
     check50.run("python3 is_prime.py").stdin("").reject()
