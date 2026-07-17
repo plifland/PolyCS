@@ -20,8 +20,8 @@ def check_board(board, source):
     char_cnts = Counter(board)
 
     # Replace the user characters with 0,1 like the source file
-    board = board.replace(char_cnts[0], "0")
-    board = board.replace(char_cnts[1], "1")
+    board = board.replace(char_cnts.most_common(2)[0][0], "0")
+    board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
     expected = open(source)
 
