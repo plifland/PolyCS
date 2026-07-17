@@ -23,7 +23,7 @@ def check_board(board, source):
     board = board.replace(char_cnts.most_common(2)[0][0], "0")
     board = board.replace(char_cnts.most_common(2)[1][0], "1")
 
-    expected = open(source).read(encoding="utf-8")
+    expected = open(source, encoding="utf-8").read()
 
     help = ""
     if not match(expected, board):
