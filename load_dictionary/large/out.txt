@@ -1,0 +1,2 @@
+List dict has 143091 words
+Set dict has 143091 words
