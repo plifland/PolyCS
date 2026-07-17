@@ -30,7 +30,7 @@ def test_spaceship():
 @check50.check(exists)
 def test_reject_nofile():
     """demands a file passed in"""
-    check50.run("python3 game_of_life.py").reject()
+    check50.run("python3 game_of_life.py").exit()
 
 @check50.check(exists)
 def test_reject_negative():
