@@ -4,6 +4,7 @@ import check50
 def exists():
     """readability.py exists."""
     check50.exists("readability.py")
+    check50.include("texts")
 
 @check50.check(exists)
 def multiple_sentences():
@@ -24,6 +25,7 @@ def long_text():
 def short_gutenberg_text():
     """handles a short text from Gutenberg by avoiding reading under *** END"""
     output = check50.run("python3 readability.py texts/potter.txt").stdout("Grade\D+7", "Grade 7\n")
+    help = None
     if output == "Grade 11":
       help = "make sure you don't read the long license at the bottom of potter.txt!\nIt's a much higher reading level than the text itself!"
       raise check50.Mismatch("Grade 7\n", output, help=help)
