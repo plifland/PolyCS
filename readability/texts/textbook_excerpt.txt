@@ -1,1 +1,1 @@
-In this chapter, we’ll see how Python represents numbers, letters, and words.
+In this chapter, we'll see how Python represents numbers, letters, and words.
