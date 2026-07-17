@@ -1,5 +1,1 @@
-
 We will start with the most basic elements of programming and work our way up. In this chapter, we’ll see how Python represents numbers, letters, and words. And you’ll learn to perform arithmetic operations.
-
-You will also start to learn the vocabulary of programming, including terms like operator, expression, value, and type. This vocabulary is important – you will need it to understand the rest of the book, to communicate with other programmers, and to use and understand virtual assistants.
-
