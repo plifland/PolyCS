@@ -1,0 +1,7 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require game_of_life.py
+
+check50:
+  files: *submit50_files
