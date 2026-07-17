@@ -40,5 +40,5 @@ def short_gutenberg_text():
 
 @check50.check(exists)
 def test_reject_nofile():
-    """demands a file passed in"""
+    """demands a file passed in via command line"""
     check50.run("python3 readability.py").exit()

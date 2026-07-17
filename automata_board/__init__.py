@@ -29,7 +29,7 @@ def test_spaceship():
 
 @check50.check(exists)
 def test_reject_nofile():
-    """demands a file passed in"""
+    """demands a file passed in via command line"""
     check50.run("python3 automata_board.py").exit()
 
 def check_board(board, source):
