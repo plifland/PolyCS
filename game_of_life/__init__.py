@@ -12,19 +12,19 @@ def exists():
 @check50.check(exists)
 def test_blinker():
     """Prints the tiny 3x3 Blinker board"""
-    board = check50.run("python3 game_of_life.py boards/blinker.txt").stdout(timeout=20)
+    board = check50.run("python3 game_of_life.py boards/blinker.txt").stdin("10").stdout(timeout=20)
     check_board(board, "boards/blinker.txt")
 
 @check50.check(exists)
 def test_pulsar():
     """Prints the 17x17 Pulsar board"""
-    board = check50.run("python3 game_of_life.py boards/pulsar.txt").stdout()
+    board = check50.run("python3 game_of_life.py boards/pulsar.txt").stdin("10").stdout()
     check_board(board, "boards/pulsar.txt")
 
 @check50.check(exists)
 def test_spaceship():
     """Prints the rectangular Heavy Weight Spaceship board"""
-    board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdout()
+    board = check50.run("python3 game_of_life.py boards/heavyWeightSpaceship.txt").stdin("10").stdout()
     check_board(board, "boards/heavyWeightSpaceship.txt")
 
 def check_board(board, source):
