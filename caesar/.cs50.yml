@@ -1,0 +1,7 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require caesar.py
+
+check50:
+  files: *submit50_files
