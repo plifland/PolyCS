@@ -47,5 +47,5 @@ def test8():
 
 @check50.check(exists)
 def test9():
-    """everything is very strong"""
+    """everything is VERY STRONG"""
     check50.run("python3 password_rater.py").stdin("Bkx4UHM@$#g5zZ4etd2V").stdout("VERY STRONG\n").exit()
