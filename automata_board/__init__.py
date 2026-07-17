@@ -30,7 +30,7 @@ def test_spaceship():
 @check50.check(exists)
 def test_reject_nofile():
     """demands a file passed in via command line"""
-    check50.run("python3 automata_board.py").exit()
+    check50.run("python3 automata_board.py").stdout("usage: automata_board.py .+", regex=True).exit()
 
 def check_board(board, source):
     # Get the two characters likely used to draw
