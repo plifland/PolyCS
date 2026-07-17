@@ -31,7 +31,7 @@ def short_gutenberg_text():
     output = check50.run("python3 readability.py texts/potter.txt").stdout()
     expected = "Grade 7\n"
     help = None
-    if output == "Grade 11":
+    if output == "Grade 11\n":
         help = "make sure you don't read the long license at the bottom of potter.txt!\nIt's a much higher reading level than the text itself!"
         raise check50.Mismatch(expected, output, help=help)
 
