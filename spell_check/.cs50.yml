@@ -1,0 +1,7 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require spell_check.py
+
+check50:
+  files: *submit50_files
