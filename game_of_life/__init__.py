@@ -30,7 +30,7 @@ def test_spaceship():
 @check50.check(exists)
 def test_reject_nofile():
     """demands a file passed in via command line"""
-    check50.run("python3 game_of_life.py").exit()
+    check50.run("python3 game_of_life.py").stdout("usage: game_of_life.py .+", regex=True).exit()
 
 @check50.check(exists)
 def test_reject_negative():

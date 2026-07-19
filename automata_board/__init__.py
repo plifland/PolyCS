@@ -44,5 +44,5 @@ def check_board(board, source):
     help = "\n\tIf you changed the looks of your board dramatically, it might not match and that's ok!"
     if not match(expected, board):
         if len(expected) == len(board) - 1:
-          help = "\n\tWatch out - the text file has a strange whitespace character that you are turning into a cell!\n\tMake sure you encode only 0s and 1s\n"
+          help = "\n\tWatch out - the text file may have a whitespace character that you are turning into a cell!\n\tMake sure you encode only 0s and 1s\n"
         raise check50.Mismatch(expected, board, help=help)

@@ -18,22 +18,22 @@ def test2():
 @check50.check(exists)
 def test3():
     """everything but length is STRONG"""
-    check50.run("python3 password_rater.py").stdin("P@$sW0rd").stdout("STRONG\n").exit()
+    check50.run("python3 password_rater.py").stdin("P@$sW0rd").stdout("^STRONG\n", "STRONG\n").exit()
 
 @check50.check(exists)
 def test4():
     """everything but lower is STRONG"""
-    check50.run("python3 password_rater.py").stdin("HOWISITPOSSIBLETONOTHAVELOWER?42").stdout("STRONG\n").exit()
+    check50.run("python3 password_rater.py").stdin("HOWISITPOSSIBLETONOTHAVELOWER?42").stdout("^STRONG\n").exit()
 
 @check50.check(exists)
 def test5():
     """everything but upper is STRONG"""
-    check50.run("python3 password_rater.py").stdin("thishaseverything!exceptuppercharacters2024").stdout("STRONG\n").exit()
+    check50.run("python3 password_rater.py").stdin("thishaseverything!exceptuppercharacters2024").stdout("^STRONG\n").exit()
 
 @check50.check(exists)
 def test6():
     """everything but number is STRONG"""
-    check50.run("python3 password_rater.py").stdin("thisHasEverything!exceptNumbers:(").stdout("STRONG\n").exit()
+    check50.run("python3 password_rater.py").stdin("thisHasEverything!exceptNumbers:(").stdout("^STRONG\n").exit()
 
 @check50.check(exists)
 def test7():
@@ -43,7 +43,7 @@ def test7():
 @check50.check(exists)
 def test8():
     """everything but middle special is STRONG"""
-    check50.run("python3 password_rater.py").stdin("CorrectHorseBatterySt4ple!").stdout("STRONG\n").exit()
+    check50.run("python3 password_rater.py").stdin("CorrectHorseBatterySt4ple!").stdout("^STRONG\n").exit()
 
 @check50.check(exists)
 def test9():
