@@ -2,20 +2,20 @@ import check50
 
 @check50.check()
 def exists():
-    """PersonalHello.java exists"""
-    check50.exists("PersonalHello.java")
+    """PersonalizedHello.java exists"""
+    check50.exists("PersonalizedHello.java")
     check50.include("Panther.txt", "Poly Panther.txt")
 
 @check50.check(exists)
 def test1():
     """handles a 1 word name correctly """
-    out = check50.run("java ./PersonalHello.java").stdin("Panther", timeout=10).stdout()
+    out = check50.run("java ./PersonalizedHello.java").stdin("Panther", timeout=10).stdout()
     check_output(out, open("Panther.txt").read())
 
 @check50.check(exists)
 def test2():
     """handles a name with a space correctly """
-    out = check50.run("java ./PersonalHello.java").stdin("Poly Panther", timeout=10).stdout()
+    out = check50.run("java ./PersonalizedHello.java").stdin("Poly Panther", timeout=10).stdout()
     check_output(out, open("Poly Panther.txt").read())
 
 
