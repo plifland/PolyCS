@@ -8,14 +8,14 @@ def exists():
 @check50.check(exists)
 def testhello():
     """input of HELLO yields output of hello"""
-    check50.run("java IndoorVoices.java").stdin("HELLO").stdout("hello").exit()
+    check50.run("java IndoorVoices.java").stdin("HELLO", timeout=10).stdout("hello").exit()
 
 @check50.check(exists)
 def testcs50():
     """input of THIS is POLY CS yields output of this is poly cs"""
-    check50.run("java IndoorVoices.java").stdin("THIS is POLY CS").stdout("this is poly cs").exit()
+    check50.run("java IndoorVoices.java").stdin("THIS is POLY CS", timeout=10).stdout("this is poly cs").exit()
 
 @check50.check(exists)
 def testnumber():
     """input of 50 yields output of 50"""
-    check50.run("java IndoorVoices.java").stdin("50").stdout("50").exit()
+    check50.run("java IndoorVoices.java").stdin("50", timeout=10).stdout("50").exit()
