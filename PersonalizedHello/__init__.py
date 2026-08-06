@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """PersonalizedHello.java compiles"""
-    check50.run("javac PersonalizedHello.java").exit()
+    check50.run("javac PersonalizedHello.java").exit(0)
 
 @check50.check(compiles)
 def test1():

@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """TemperatureConverter.java compiles"""
-    check50.run("javac TemperatureConverter.java").exit()
+    check50.run("javac TemperatureConverter.java").exit(0)
 
 @check50.check(compiles)
 def testzero():

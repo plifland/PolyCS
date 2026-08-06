@@ -8,5 +8,5 @@ def exists():
 @check50.check(exists)
 def compiles():
     """PersonalizedAds.java compiles"""
-    check50.run("javac PersonalizedAds.java").exit()
+    check50.run("javac PersonalizedAds.java").exit(0)
 

@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """Credit.java compiles"""
-    check50.run("javac Credit.java").exit()
+    check50.run("javac Credit.java").exit(0)
 
 @check50.check(compiles)
 def test1():

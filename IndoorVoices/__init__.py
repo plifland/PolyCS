@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """IndoorVoices.java compiles"""
-    check50.run("javac IndoorVoices.java").exit()
+    check50.run("javac IndoorVoices.java").exit(0)
 
 @check50.check(compiles)
 def testhello():
