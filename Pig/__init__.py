@@ -6,6 +6,6 @@ def exists():
     check50.exists("Pig.java")
 
 @check50.check(exists)
-def compiles():
+def compiles(exists):
     """Pig.java compiles"""
     check50.run("javac Pig.java").exit(0)

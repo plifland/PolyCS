@@ -3,7 +3,7 @@ import check50
 @check50.check()
 def exists():
     """Mario.java exists."""
-    check50.compiles("Mario.java")
+    check50.exists("Mario.java")
     check50.include("1.txt", "2.txt", "8.txt")
 
 @check50.check(exists)
