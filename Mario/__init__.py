@@ -43,7 +43,7 @@ def test23():
 def test24():
     """rejects a height of 9, and then accepts a height of 2"""
     (check50.run("java Mario").stdin("9").reject()
-            .stdin("2").stdout(open("2.txt")).exit(0))
+            .stdin("2", prompt=False).stdout(open("2.txt")).exit(0))
 
 @check50.check(compiles)
 def test_reject_foo():
