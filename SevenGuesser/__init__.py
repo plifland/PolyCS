@@ -3,7 +3,7 @@ import check50
 @check50.check()
 def exists():
     """SevenGuesser exists"""
-    check50.exists("SevenGuesser")
+    check50.exists("SevenGuesser.java")
 
 @check50.check(exists)
 def compiles():

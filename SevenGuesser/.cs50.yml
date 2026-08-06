@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require seven_guesser.py
+    - !require SevenGuesser.java
   style: true
 
 check50:
