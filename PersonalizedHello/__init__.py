@@ -13,9 +13,9 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """handles a 1 word name correctly """
-    check50.run("java ./PersonalizedHello").stdin("Panther").stdout("Hello, Panther!")
+    check50.run("java PersonalizedHello").stdin("Panther").stdout("Hello, Panther!")
 
 @check50.check(compiles)
 def test2():
     """handles a name with a space correctly """
-    check50.run("java ./PersonalizedHello").stdin("Poly Panther").stdout("Hello, Poly Panther!")
+    check50.run("java PersonalizedHello").stdin("Poly Panther").stdout("Hello, Poly Panther!")
