@@ -1,0 +1,7 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require Mario.java
+
+check50:
+  files: *submit50_files
