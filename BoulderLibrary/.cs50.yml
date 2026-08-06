@@ -1,0 +1,8 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require BoulderLibrary.java
+  style: true
+
+check50:
+  files: *submit50_files
