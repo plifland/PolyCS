@@ -13,12 +13,12 @@ def compiles():
 @check50.check(compiles)
 def testfancy():
     """Serves a fancy fundraiser ad for a boulder resident over 24"""
-    check50.run("java ./BoulderLibrary").stdin("80301", prompt=True).stdin("40", prompt=True).stdout("Fancy fundraiser ad:.+").exit()
+    check50.run("java ./BoulderLibrary").stdin("80301", prompt=False).stdin("40", prompt=False).stdout("Fancy fundraiser ad:.+").exit()
 
 @check50.check(compiles)
 def test25():
     """Serves a fancy fundraiser ad for a boulder resident exactly 25"""
-    check50.run("java BoulderLibrary").stdin("80302", prompt=True).stdin("25", prompt=True).stdout("Fancy fundraiser ad:.+").exit()
+    check50.run("java BoulderLibrary").stdin("80302", prompt=False).stdin("25", prompt=False).stdout("Fancy fundraiser ad:.+").exit()
 
 @check50.check(compiles)
 def testevent():
