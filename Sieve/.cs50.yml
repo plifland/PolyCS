@@ -2,6 +2,7 @@ submit50:
   files: &submit50_files
     - !exclude "*"
     - !require Sieve.java
+    - !include IsPrime.java
 
 check50:
   files: *submit50_files
