@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """Sieve.java compiles"""
-    check50.run("javac Sieve.java").exit(0)
+    check50.run("javac *.java").exit(0)
 
 @check50.check(compiles)
 def test2():
