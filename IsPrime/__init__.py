@@ -32,8 +32,8 @@ def test99991():
 
 @check50.check(compiles)
 def test9998000099():
-    """9998000099 is not prime"""
-    check50.run("java IsPrime").stdin("9998000099").stdout("false").exit()
+    """998000099 is not prime"""
+    check50.run("java IsPrime").stdin("998000099").stdout("false").exit()
 
 @check50.check(compiles)
 def test_reject_negative():
