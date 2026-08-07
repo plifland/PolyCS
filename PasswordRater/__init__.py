@@ -7,8 +7,8 @@ def exists():
 
 @check50.check(exists)
 def compiles():
-    """LuggagePassword.java compiles"""
-    check50.run("javac LuggagePassword.java").exit(0)
+    """PasswordRater.java compiles"""
+    check50.run("javac PasswordRater.java").exit(0)
 
 @check50.check(compiles)
 def test1():
