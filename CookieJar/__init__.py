@@ -10,12 +10,12 @@ def exists_client():
     """MysteriousBlueClient.java exists."""
     check50.exists("MysteriousBlueClient.java")
 
-@check50.check(exists)
+@check50.check(exists_jar)
 def compiles_jar():
     """CookieJar.java compiles"""
     check50.run("javac CookieJar.java").exit(0)
 
-@check50.check(exists)
+@check50.check(exists_client)
 def compiles_client():
     """MysteriousBlueClient.java compiles"""
     check50.run("javac MysteriousBlueClient.java").exit(0)
