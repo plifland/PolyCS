@@ -1,0 +1,8 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !require CookieJar.java
+    - !require MysteriousBlueClient.java
+
+check50:
+  files: *submit50_files
