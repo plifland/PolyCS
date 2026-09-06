@@ -85,3 +85,8 @@ def uses_custom_block(project):
 
     if "custom_block" not in json.dumps(project):
         raise check50.Failure("no custom blocks found, 1 required")
+
+def contains_blocks(project, opcodes):
+    """Return whether project contains any blocks with their names in opcodes"""
+    return any(any((isinstance(block, dict) and block["opcode"] in opcodes) for block in target["blocks"].values())
+               for target in project)
