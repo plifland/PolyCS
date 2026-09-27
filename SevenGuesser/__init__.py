@@ -47,5 +47,5 @@ def test_too_high2():
 
 @check50.check(compiles)
 def test_lose():
-    """Guessing wrong three times loses"""
+    """Guessing wrong three times loses and says something with 'lost' or 'lose'"""
     check50.run("java SevenGuesser").stdin("3").stdin("8").stdin("5").stdout(".*[Ll]os[et].*").exit()
