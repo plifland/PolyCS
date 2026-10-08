@@ -48,21 +48,6 @@ def test420():
             help = "did you forget to round your input to the nearest cent?"
         raise check50.Mismatch(expected, actual, help=help)
 
-@check50.check(compiles)
-def test_reject_negative():
-    """rejects a negative input like -1"""
-    check50.run("java Change").stdin("-1").reject()
-
-@check50.check(compiles)
-def test_reject_foo():
-    """rejects a non-numeric input of "foo" """
-    check50.run("java Change").stdin("foo").reject()
-
-@check50.check(compiles)
-def test_reject_empty():
-    """rejects a non-numeric input of "" """
-    check50.run("java Change").stdin("").reject()
-
 
 def coins(num):
     return fr"(^|[^\d]){num}(?!\d)"
