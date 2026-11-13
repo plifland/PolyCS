@@ -18,17 +18,17 @@ def testClean():
 @check50.check(compiles)
 def test90Streak():
     """90-streak"""
-    check50.run("java WeatherReport").stdin("90-streak").stdout("Longest streak of 90\+ degree temperatures: 31 days\n\n").exit()
+    check50.run("java WeatherReport").stdin("90-streak").stdout("Longest streak of 90 degree temperatures: 31 days\n\n").exit()
 
 @check50.check(compiles)
 def test100Streak():
     """100-streak"""
-    check50.run("java WeatherReport").stdin("100-streak").stdout("Longest streak of 100\+ degree temperatures: 5 days\n\n").exit()
+    check50.run("java WeatherReport").stdin("100-streak").stdout("Longest streak of 100 degree temperatures: 5 days\n\n").exit()
 
 @check50.check(compiles)
 def test70Streak():
     """70-streak"""
-    check50.run("java WeatherReport").stdin("70-streak").stdout("Longest streak of 70\+ degree temperatures: 92 days\n\n").exit()
+    check50.run("java WeatherReport").stdin("70-streak").stdout("Longest streak of 70 degree temperatures: 92 days\n\n").exit()
 
 @check50.check(compiles)
 def testAvgDailySpread():
