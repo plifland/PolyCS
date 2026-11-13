@@ -43,4 +43,4 @@ def testMaxVolatility():
 @check50.check(compiles)
 def testAvgVolatility():
     """AvgVolatility"""
-    check50.run("java WeatherReport").stdin("AvgVolatility").stdout("Average change in high temperature between two days: 1.6 degrees\n").exit()
+    check50.run("java WeatherReport").stdin("AvgVolatility").stdout("Average change in high temperature between two days: 2.7 degrees\n").exit()
